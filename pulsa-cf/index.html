@@ -105,11 +105,11 @@
 </section>
 
 <section id="products" class="products">
-  <div class="section-head container" style="padding:0;">
-    <span class="eyebrow">Přístroje</span>
-    <h2>Vyberte si výkon podle svého provozu</h2>
-    <p>Od domácího použití po plně vybavené studio — každý model sdílí stejnou technologii pole, liší se výkonem a počtem hlavic.</p>
-  </div>
+      <div class="section-head container" style="padding:0;">
+          <span class="eyebrow">Přístroje</span>
+          <h2>Vyberte si přístroj podle své specializace</h2>
+        <p>EMS tvarování postavy, obličejová anti-age péče i lifting — ukázka z naší nabídky.</p>
+      </div>
   <div class="container" style="padding:0;">
     <div class="products-grid" id="productsGrid"></div>
     <div style="text-align:center; margin-top:36px;">
@@ -202,7 +202,7 @@
 <script>
   // render home product cards (from shared PRODUCTS data)
   const grid = document.getElementById('productsGrid');
-  grid.innerHTML = PRODUCTS.map(p => `
+    grid.innerHTML = PRODUCTS.filter(p => ['pro','lift','skinai'].includes(p.id)).map(p => `
     <div class="plan ${p.featured ? 'featured' : ''}">
       ${p.featured ? '<span class="plan-badge">Nejoblíbenější</span>' : ''}
       <h3>${p.name}</h3>
