@@ -10,10 +10,18 @@
 // STRIPE_SECRET_KEY — nikdy není součástí kódu.
 
 const PRODUCTS = {
-  lite:   { name: 'PULSA Lite',    price: 89900 },
-  pro:    { name: 'PULSA Pro',     price: 159900 },
-  promax: { name: 'PULSA Pro Max', price: 229900 }
+    lite:      { name: 'PULSA Lite',      price: 59995 },
+    pro:       { name: 'PULSA Pro',       price: 99990 },
+    promax:    { name: 'PULSA Pro Max',   price: 99900 },
+    goldmax:   { name: 'PULSA Gold Max',  price: 199990 },
+    face:      { name: 'PULSA Face',      price: 99990 },
+    lift:      { name: 'PULSA Lift',      price: 129990 },
+    glow:      { name: 'PULSA Glow',      price: 60500 },
+    skinai:    { name: 'PULSA Skin AI',   price: 89990 },
+    sedak:     { name: 'Sedák PULSA',     price: 14999 },
+    elektrody: { name: 'Náhradní elektrody 10 ks', price: 4000 }
 };
+
 
 // Stripe API bere parametry ve tvaru pole[index][klíč]=hodnota (form-encoded).
 // Tahle funkce vezme vnořený objekt a rozbalí ho do takových párů.
