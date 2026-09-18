@@ -73,3 +73,5 @@ Přehled plateb uvidíš ve Stripe dashboardu pod **Payments**.
 
 
 <!-- redeploy trigger -->
+
+<!-- redeploy 2 -->
