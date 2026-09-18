@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O přístrojích — PULSA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="index.html" class="logo"><span class="logo-mark"></span>PULSA</a>
+    <div class="nav-links">
+      <a href="index.html">Domů</a>
+      <a href="produkty.html">Přístroje</a>
+      <a href="o-pristrojich.html" class="active">O přístrojích</a>
+      <a href="kontakt.html">Kontakt</a>
+    </div>
+    <div class="nav-right">
+      <button class="cart-btn" id="cartToggle" aria-label="Otevřít košík">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="21" r="1.5"/><circle cx="18" cy="21" r="1.5"/><path d="M2 3h2l2.4 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6L21 7H6"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Domů</a>
+    <a href="produkty.html">Přístroje</a>
+    <a href="o-pristrojich.html" class="active">O přístrojích</a>
+    <a href="kontakt.html">Kontakt</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="page-hero-glow"></div>
+  <div class="container" style="padding:0; position:relative;">
+    <span class="breadcrumb"><a href="index.html">Domů</a> / O přístrojích</span>
+    <h1>Jak elektromagnetická stimulace funguje</h1>
+    <p class="lead">Technologie, průběh procedury, ošetřované partie a kontraindikace — vše, co potřebujete vědět před zakoupením nebo objednáním procedury.</p>
+  </div>
+</section>
+
+<section style="padding-top:56px;">
+  <div class="section-head container" style="padding:0;">
+    <span class="eyebrow">Princip</span>
+    <h2>Fokusované elektromagnetické pole</h2>
+    <p>Aplikátor generuje vysokovýkonné elektromagnetické pulzy, které procházejí kůží a podkožní tkání a vyvolávají mimovolní kontrakce cílové svalové skupiny — intenzivnější, než jakých je sval schopen dosáhnout vlastní vůlí.</p>
+  </div>
+  <div class="container" style="padding:0;">
+    <div class="diagram">
+      <div class="diagram-item">
+        <div class="diagram-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg></div>
+        <h4>Elektromagnetický pulz</h4>
+        <p>Cívka v hlavici generuje pole procházející tkání bez kontaktu s nervovými zakončeními na povrchu kůže.</p>
+      </div>
+      <div class="diagram-item">
+        <div class="diagram-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg></div>
+        <h4>Depolarizace motorických nervů</h4>
+        <p>Pole vyvolá akční potenciál přímo na motorickém nervu, který řídí danou svalovou skupinu.</p>
+      </div>
+      <div class="diagram-item">
+        <div class="diagram-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h4l2-8 4 16 2-8h4"/></svg></div>
+        <h4>Supramaximální kontrakce</h4>
+        <p>Sval se stáhne intenzivněji, než dovoluje přirozený ochranný limit centrální nervové soustavy.</p>
+      </div>
+      <div class="diagram-item">
+        <div class="diagram-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div>
+        <h4>Adaptace tkáně</h4>
+        <p>Opakovaná zátěž postupně vede k remodelaci svalových vláken a redukci přilehlé tukové vrstvy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="section-head container" style="padding:0;">
+    <span class="eyebrow">Průběh procedury</span>
+    <h2>Tři fáze, jedna 30minutová procedura</h2>
+    <p>Přístroj postupně zvyšuje intenzitu pole tak, aby svalová tkáň měla čas se adaptovat — stejný princip jako zahřátí před silovým tréninkem, jen bez pohybu.</p>
+  </div>
+  <div class="container" style="padding:0;">
+    <div class="phases">
+      <div class="phase">
+        <span class="freq">0–8 MIN · AKTIVACE</span>
+        <div class="bar"><i style="width:35%"></i></div>
+        <h3>Zahřátí tkáně</h3>
+        <p>Nízkofrekvenční pulzy probouzí svalová vlákna a připravují je na zátěž bez rizika přetížení.</p>
+      </div>
+      <div class="phase">
+        <span class="freq">8–22 MIN · BUDOVÁNÍ</span>
+        <div class="bar"><i style="width:70%"></i></div>
+        <h3>Supramaximální kontrakce</h3>
+        <p>Intenzita stoupá na úroveň, která obchází přirozený limit centrální nervové soustavy.</p>
+      </div>
+      <div class="phase">
+        <span class="freq">22–30 MIN · ZPEVNĚNÍ</span>
+        <div class="bar"><i style="width:100%"></i></div>
+        <h3>Vrcholová fáze</h3>
+        <p>Krátké špičkové pulzy v závěru procedury podporují remodelaci svalových vláken.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-head container" style="padding:0;">
+    <span class="eyebrow">Technické specifikace</span>
+    <h2>Parametry přístrojů PULSA</h2>
+  </div>
+  <div class="container spec-wrap" style="padding:0;">
+    <table class="spec-table">
+      <thead><tr><th>Parametr</th><th>Hodnota</th></tr></thead>
+      <tbody>
+        <tr><td>Technologie</td><td class="val">Fokusované elektromagnetické pole (FMS)</td></tr>
+        <tr><td>Frekvenční rozsah</td><td class="val">1–150 Hz</td></tr>
+        <tr><td>Max. magnetická indukce</td><td class="val">do 7 Tesla (dle hlavice)</td></tr>
+        <tr><td>Délka standardní procedury</td><td class="val">30 minut</td></tr>
+        <tr><td>Doporučená kúra</td><td class="val">4–6 procedur po 2–3 dnech</td></tr>
+        <tr><td>Chlazení hlavic</td><td class="val">Aktivní vzduchové chlazení</td></tr>
+        <tr><td>Napájení</td><td class="val">230 V, jednofázové</td></tr>
+        <tr><td>Ovládání</td><td class="val">Dotykový displej + dálkový ovladač hlavic</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <div class="section-head container" style="padding:0;">
+    <span class="eyebrow">Bezpečnost</span>
+    <h2>Kdy proceduru nepodstupovat</h2>
+    <p>Před první procedurou vždy proveďte vstupní konzultaci s klientem a projděte kompletní zdravotní dotazník.</p>
+  </div>
+  <div class="container" style="padding:0;">
+    <div class="contra-list">
+      <div class="contra-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>Těhotenství a kojení</div>
+      <div class="contra-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>Kardiostimulátor nebo jiný implantovaný elektronický přístroj</div>
+      <div class="contra-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>Kovové implantáty v oblasti aplikace</div>
+      <div class="contra-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>Epilepsie nebo jiné neurologické onemocnění</div>
+      <div class="contra-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>Akutní zánět nebo horečka</div>
+      <div class="contra-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>Nádorové onemocnění v oblasti aplikace</div>
+    </div>
+    <p style="font-size:12.5px; color:var(--text-muted); margin-top:18px; max-width:640px;">Přehled je informativní a nenahrazuje kompletní zdravotní dotazník ani konzultaci s lékařem. Plný seznam kontraindikací je součástí dokumentace dodávané s přístrojem.</p>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="section-head container" style="padding:0;">
+    <span class="eyebrow">Časté dotazy</span>
+    <h2>Ještě váháte?</h2>
+  </div>
+  <div class="container faq-list" style="padding:0;" id="faqList"></div>
+</section>
+
+<section>
+  <div class="cta-band">
+    <div>
+      <h2>Máte doplňující otázku k technologii?</h2>
+      <p>Ozvěte se — poradíme s výběrem modelu i s bezpečným zahájením provozu.</p>
+    </div>
+    <a href="kontakt.html" class="btn btn-primary">Napsat dotaz</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="logo" style="margin-bottom:14px;"><span class="logo-mark"></span>PULSA</div>
+      <p style="font-size:13.5px; color:var(--text-muted); max-width:280px;">Elektromagnetické přístroje pro tvarování postavy a posílení pánevního dna. Dodáváme, instalujeme a školíme obsluhu po celé ČR.</p>
+    </div>
+    <div>
+      <h4>Nabídka</h4>
+      <ul><li><a href="produkty.html">Přístroje</a></li><li><a href="o-pristrojich.html">O přístrojích</a></li><li><a href="index.html#benefits">Výhody</a></li></ul>
+    </div>
+    <div>
+      <h4>Podpora</h4>
+      <ul><li><a href="o-pristrojich.html#faq">FAQ</a></li><li><a href="kontakt.html">Servis a záruka</a></li><li><a href="kontakt.html">Školení obsluhy</a></li></ul>
+    </div>
+    <div>
+      <h4>Kontakt</h4>
+      <ul><li>info@pulsa-ems.cz</li><li>+420 800 100 200</li><li>Po–Pá 8:00–18:00</li></ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 PULSA. Ukázkový e-shop — šablona pro EMS studio.</span>
+    <span>Obchodní podmínky · Ochrana osobních údajů</span>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Košík">
+  <div class="drawer-head">
+    <h3>Košík</h3>
+    <button class="drawer-close" id="drawerClose" aria-label="Zavřít košík">✕</button>
+  </div>
+  <div class="drawer-body" id="drawerBody"></div>
+  <div class="drawer-foot" id="drawerFoot" style="display:none;">
+    <div class="subtotal-row"><span>Mezisoučet</span><span class="amt mono" id="subtotalAmt">0 Kč</span></div>
+    <button class="btn btn-primary btn-block" id="checkoutBtn">Pokračovat k objednávce</button>
+    <div class="note-banner">Demo košík ukládá data jen do paměti stránky — po obnovení nebo přechodu na jinou stránku se vynuluje.</div>
+  </div>
+</aside>
+
+<div class="modal" id="checkoutModal">
+  <div class="modal-backdrop" id="modalBackdrop"></div>
+  <div class="modal-box" id="modalBox"></div>
+</div>
+
+<script src="assets/store.js"></script>
+<script>
+  const faqs = [
+    { q: 'Je procedura bolestivá?', a: 'Ne. Klienti cítí intenzivní svalové kontrakce, nikoli bolest. Intenzitu lze kdykoliv snížit pomocí ovladače.' },
+    { q: 'Jak často je potřeba přístroj používat?', a: 'Doporučený cyklus je 4–6 procedur v rozestupu 2–3 dnů, dále udržovací procedura jednou měsíčně.' },
+    { q: 'Kdo procedura nesmí podstoupit?', a: 'Přístroj se nepoužívá u těhotných žen, osob s kardiostimulátorem, kovovými implantáty v oblasti aplikace nebo epilepsií. Kompletní seznam kontraindikací je součástí dokumentace k přístroji.' },
+    { q: 'Co je součástí dodávky?', a: 'Přístroj, zvolený počet hlavic, síťový kabel, uživatelská příručka a — u modelů Pro a Pro Max — instalace a zaškolení obsluhy na místě.' },
+    { q: 'Jaká je záruka a servis?', a: 'Standardní záruka je 1–2 roky dle modelu. Náhradní díly a servisní zásahy zajišťujeme po celé ČR a SR.' }
+  ];
+  document.getElementById('faqList').innerHTML = faqs.map(f => `
+    <div class="faq-item">
+      <button class="faq-q">${f.q}<span class="plus">+</span></button>
+      <div class="faq-a"><p>${f.a}</p></div>
+    </div>
+  `).join('');
+</script>
+</body>
+</html>

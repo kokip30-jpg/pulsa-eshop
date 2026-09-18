@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PULSA — Elektromagnetická svalová stimulace</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="index.html" class="logo"><span class="logo-mark"></span>PULSA</a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Domů</a>
+      <a href="produkty.html">Přístroje</a>
+      <a href="o-pristrojich.html">O přístrojích</a>
+      <a href="kontakt.html">Kontakt</a>
+    </div>
+    <div class="nav-right">
+      <button class="cart-btn" id="cartToggle" aria-label="Otevřít košík">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="21" r="1.5"/><circle cx="18" cy="21" r="1.5"/><path d="M2 3h2l2.4 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6L21 7H6"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" class="active">Domů</a>
+    <a href="produkty.html">Přístroje</a>
+    <a href="o-pristrojich.html">O přístrojích</a>
+    <a href="kontakt.html">Kontakt</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div>
+      <span class="eyebrow">Elektromagnetická svalová stimulace</span>
+      <h1>Svaly, které <em>pracují</em>, zatímco vy ležíte.</h1>
+      <p class="lead">PULSA vyvolává supramaximální svalové kontrakce pomocí fokusované elektromagnetické energie — intenzitu, kterou vlastní vůlí nezvládne dosáhnout ani vytrénované tělo.</p>
+      <div class="hero-ctas">
+        <a href="produkty.html" class="btn btn-primary">Vybrat přístroj</a>
+        <a href="o-pristrojich.html" class="btn btn-ghost">Jak procedura funguje</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item"><span class="num mono">30 min</span><span class="lbl">délka jedné procedury</span></div>
+        <div class="trust-item"><span class="num mono">6&nbsp;úrovní</span><span class="lbl">intenzity pole</span></div>
+        <div class="trust-item"><span class="num mono">2 roky</span><span class="lbl">záruka na přístroj</span></div>
+      </div>
+    </div>
+
+    <div class="pulse-card">
+      <div class="pulse-card-top">
+        <span class="label">Simulace jedné procedury</span>
+        <span class="eyebrow" style="color:var(--violet)">live</span>
+      </div>
+      <div class="pulse-counter"><span id="counterVal">0</span><span>kontrakcí</span></div>
+      <canvas id="waveform" height="150"></canvas>
+      <div class="pulse-legend"><span>00:00</span><span id="timeVal">00:00</span><span>30:00</span></div>
+      <div class="pulse-tags">
+        <span class="pulse-tag">Břicho</span>
+        <span class="pulse-tag">Hýždě</span>
+        <span class="pulse-tag">Stehna</span>
+        <span class="pulse-tag">Paže</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="benefits">
+  <div class="section-head container" style="padding:0;">
+    <span class="eyebrow">Proč PULSA</span>
+    <h2>Navrženo pro reálné výsledky bez rekonvalescence</h2>
+  </div>
+  <div class="container" style="padding:0;">
+    <div class="benefits-grid">
+      <div class="benefit">
+        <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg></div>
+        <h3>Bez bolesti a prostojů</h3>
+        <p>Žádné jehly, řezy ani rekonvalescence — po proceduře rovnou pokračujete v běžném dni.</p>
+      </div>
+      <div class="benefit">
+        <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+        <h3>30 minut na partii</h3>
+        <p>Jedna procedura zastoupí dlouhý silový trénink dané svalové skupiny.</p>
+      </div>
+      <div class="benefit">
+        <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div>
+        <h3>Nastavitelná intenzita</h3>
+        <p>6 úrovní výkonu pro postupnou adaptaci od začátečníka po pokročilého klienta.</p>
+      </div>
+      <div class="benefit">
+        <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 12h8M12 8v8"/></svg></div>
+        <h3>Modulární hlavice</h3>
+        <p>Vyměnitelné aplikátory pro břicho, hýždě, stehna, paže i pánevní dno.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="products" class="products">
+  <div class="section-head container" style="padding:0;">
+    <span class="eyebrow">Přístroje</span>
+    <h2>Vyberte si výkon podle svého provozu</h2>
+    <p>Od domácího použití po plně vybavené studio — každý model sdílí stejnou technologii pole, liší se výkonem a počtem hlavic.</p>
+  </div>
+  <div class="container" style="padding:0;">
+    <div class="products-grid" id="productsGrid"></div>
+    <div style="text-align:center; margin-top:36px;">
+      <a href="produkty.html" class="btn btn-ghost">Zobrazit všechny přístroje a specifikace</a>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="section-head container" style="padding:0;">
+    <span class="eyebrow">Zkušenosti klientů</span>
+    <h2>Co říkají provozovatelé studií</h2>
+  </div>
+  <div class="container" style="padding:0;">
+    <div class="testi-grid">
+      <div class="testi">
+        <div class="stars">★★★★★</div>
+        <p>„Klientky vidí rozdíl v držení těla už po třech procedurách. Objednávky na hýždě a břicho nám narostly nejvíc.“</p>
+        <div class="who"><span class="avatar"></span><div><div class="who-name">Tereza K.</div><div class="who-loc">Studio Brno</div></div></div>
+      </div>
+      <div class="testi">
+        <div class="stars">★★★★★</div>
+        <p>„Ocenili jsme hlavně nastavitelnou intenzitu — dá se to dávkovat i klientům, kteří na EMS teprve zvykají.“</p>
+        <div class="who"><span class="avatar"></span><div><div class="who-name">Martin S.</div><div class="who-loc">Fit Studio Ostrava</div></div></div>
+      </div>
+      <div class="testi">
+        <div class="stars">★★★★★</div>
+        <p>„Servis a náhradní hlavice objednáváme přes dodavatele bez čekání, provoz se nám díky tomu nikdy nezastavil.“</p>
+        <div class="who"><span class="avatar"></span><div><div class="who-name">Lucie N.</div><div class="who-loc">Wellness Praha</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="cta-band">
+    <div>
+      <h2>Připraveni rozšířit nabídku svého studia?</h2>
+      <p>Přístroj dovezeme, zapojíme a proškolíme obsluhu přímo u vás.</p>
+    </div>
+    <a href="kontakt.html" class="btn btn-primary">Domluvit konzultaci</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="logo" style="margin-bottom:14px;"><span class="logo-mark"></span>PULSA</div>
+      <p style="font-size:13.5px; color:var(--text-muted); max-width:280px;">Elektromagnetické přístroje pro tvarování postavy a posílení pánevního dna. Dodáváme, instalujeme a školíme obsluhu po celé ČR.</p>
+    </div>
+    <div>
+      <h4>Nabídka</h4>
+      <ul><li><a href="produkty.html">Přístroje</a></li><li><a href="o-pristrojich.html">O přístrojích</a></li><li><a href="index.html#benefits">Výhody</a></li></ul>
+    </div>
+    <div>
+      <h4>Podpora</h4>
+      <ul><li><a href="o-pristrojich.html#faq">FAQ</a></li><li><a href="kontakt.html">Servis a záruka</a></li><li><a href="kontakt.html">Školení obsluhy</a></li></ul>
+    </div>
+    <div>
+      <h4>Kontakt</h4>
+      <ul><li>info@pulsa-ems.cz</li><li>+420 800 100 200</li><li>Po–Pá 8:00–18:00</li></ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 PULSA. Ukázkový e-shop — šablona pro EMS studio.</span>
+    <span>Obchodní podmínky · Ochrana osobních údajů</span>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Košík">
+  <div class="drawer-head">
+    <h3>Košík</h3>
+    <button class="drawer-close" id="drawerClose" aria-label="Zavřít košík">✕</button>
+  </div>
+  <div class="drawer-body" id="drawerBody"></div>
+  <div class="drawer-foot" id="drawerFoot" style="display:none;">
+    <div class="subtotal-row"><span>Mezisoučet</span><span class="amt mono" id="subtotalAmt">0 Kč</span></div>
+    <button class="btn btn-primary btn-block" id="checkoutBtn">Pokračovat k objednávce</button>
+    <div class="note-banner">Demo košík ukládá data jen do paměti stránky — po obnovení nebo přechodu na jinou stránku se vynuluje.</div>
+  </div>
+</aside>
+
+<div class="modal" id="checkoutModal">
+  <div class="modal-backdrop" id="modalBackdrop"></div>
+  <div class="modal-box" id="modalBox"></div>
+</div>
+
+<script src="assets/store.js"></script>
+<script>
+  // render home product cards (from shared PRODUCTS data)
+  const grid = document.getElementById('productsGrid');
+  grid.innerHTML = PRODUCTS.map(p => `
+    <div class="plan ${p.featured ? 'featured' : ''}">
+      ${p.featured ? '<span class="plan-badge">Nejoblíbenější</span>' : ''}
+      <h3>${p.name}</h3>
+      <div class="desc">${p.desc}</div>
+      <div class="price-row">
+        <span class="price mono">${fmtCZK(p.price)}</span>
+        ${p.oldPrice ? `<span class="old-price mono">${fmtCZK(p.oldPrice)}</span>` : ''}
+      </div>
+      ${p.oldPrice ? `<div class="save">Ušetříte ${fmtCZK(p.oldPrice - p.price)}</div>` : '<div style="height:22px"></div>'}
+      <ul>${p.features.slice(0,4).map(f => `<li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5 11-11"/></svg>${f}</li>`).join('')}</ul>
+      <button class="btn ${p.featured ? 'btn-primary' : 'btn-ghost'} btn-block" data-add="${p.id}">Přidat do košíku</button>
+    </div>
+  `).join('');
+
+  /* hero waveform animation */
+  const canvas = document.getElementById('waveform');
+  const ctx = canvas.getContext('2d');
+  const counterEl = document.getElementById('counterVal');
+  const timeEl = document.getElementById('timeVal');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function resizeCanvas(){
+    const rect = canvas.getBoundingClientRect();
+    canvas.width = rect.width * devicePixelRatio;
+    canvas.height = rect.height * devicePixelRatio;
+    ctx.scale(devicePixelRatio, devicePixelRatio);
+  }
+  resizeCanvas();
+  window.addEventListener('resize', () => { ctx.setTransform(1,0,0,1,0,0); resizeCanvas(); });
+
+  let t = 0;
+  const totalContractions = 22000;
+  const durationMs = reduceMotion ? 1 : 9000;
+  const startTime = performance.now();
+
+  function drawFrame(w, h, intensity){
+    ctx.clearRect(0, 0, w, h);
+    ctx.strokeStyle = 'rgba(243,241,236,0.06)';
+    ctx.lineWidth = 1;
+    for(let gx = 0; gx < w; gx += 28){ ctx.beginPath(); ctx.moveTo(gx, 0); ctx.lineTo(gx, h); ctx.stroke(); }
+    const grad = ctx.createLinearGradient(0, 0, w, 0);
+    grad.addColorStop(0, '#2DE1C2'); grad.addColorStop(1, '#6C5CE7');
+    ctx.strokeStyle = grad; ctx.lineWidth = 2.4;
+    ctx.beginPath();
+    const points = 160;
+    for(let i = 0; i <= points; i++){
+      const x = (i / points) * w;
+      const phase = (i / points) * Math.PI * 10 + t;
+      const spike = Math.pow(Math.abs(Math.sin(phase)), 6) * Math.sign(Math.sin(phase));
+      const y = h/2 - spike * (h * 0.38) * intensity;
+      if(i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+    ctx.strokeStyle = 'rgba(243,241,236,0.14)'; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(0, h/2); ctx.lineTo(w, h/2); ctx.stroke();
+    t += 0.045;
+  }
+
+  function draw(now){
+    const elapsed = Math.min((now - startTime) / durationMs, 1);
+    const w = canvas.getBoundingClientRect().width;
+    const h = canvas.getBoundingClientRect().height;
+    drawFrame(w, h, 0.25 + elapsed * 0.75);
+    counterEl.textContent = Math.round(elapsed * totalContractions).toLocaleString('cs-CZ');
+    const secs = Math.round(elapsed * 30 * 60);
+    timeEl.textContent = String(Math.floor(secs/60)).padStart(2,'0') + ':' + String(secs%60).padStart(2,'0');
+    if(elapsed < 1){ requestAnimationFrame(draw); } else { requestAnimationFrame(loopIdle); }
+  }
+  function loopIdle(){
+    const w = canvas.getBoundingClientRect().width;
+    const h = canvas.getBoundingClientRect().height;
+    drawFrame(w, h, 1);
+    requestAnimationFrame(loopIdle);
+  }
+  if(reduceMotion){
+    counterEl.textContent = totalContractions.toLocaleString('cs-CZ');
+    timeEl.textContent = '30:00';
+    requestAnimationFrame(loopIdle);
+  } else {
+    requestAnimationFrame(draw);
+  }
+</script>
+</body>
+</html>

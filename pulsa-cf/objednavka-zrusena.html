@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Platba zrušena — PULSA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  .result-wrap{ min-height:70vh; display:flex; align-items:center; justify-content:center; padding:40px 24px; }
+  .result-card{ max-width:480px; width:100%; background:var(--surface); border:1px solid var(--line); border-radius:20px; padding:44px 34px; text-align:center; }
+  .result-icon{ width:64px; height:64px; border-radius:50%; background:var(--coral-soft); color:var(--coral); display:flex; align-items:center; justify-content:center; margin:0 auto 22px; }
+  .result-card h1{ font-size:22px; margin-bottom:10px; }
+  .result-card p{ font-size:14.5px; color:var(--text-muted); margin-bottom:28px; }
+  .btn-row-center{ display:flex; gap:10px; justify-content:center; flex-wrap:wrap; }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="index.html" class="logo"><span class="logo-mark"></span>PULSA</a>
+    <div class="nav-links">
+      <a href="index.html">Domů</a>
+      <a href="produkty.html">Přístroje</a>
+      <a href="o-pristrojich.html">O přístrojích</a>
+      <a href="kontakt.html">Kontakt</a>
+    </div>
+  </nav>
+</header>
+
+<div class="result-wrap">
+  <div class="result-card">
+    <div class="result-icon">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </div>
+    <h1>Platba nebyla dokončena</h1>
+    <p>Objednávka nebyla zaplacena a nebyla nijak zpracována. Košík zůstává zachovaný — můžete se vrátit a zkusit to znovu.</p>
+    <div class="btn-row-center">
+      <a href="produkty.html" class="btn btn-primary">Zpět do obchodu</a>
+      <a href="kontakt.html" class="btn btn-ghost">Kontaktovat podporu</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
