@@ -70,3 +70,6 @@ Přehled plateb uvidíš ve Stripe dashboardu pod **Payments**.
   chtít later přepnout, dej vědět).
 - Kontaktní formulář na `kontakt.html` zatím nikam neodesílá — to je
   nezávislé od plateb.
+
+
+<!-- redeploy trigger -->
